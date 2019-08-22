@@ -42,3 +42,17 @@ elseif ($number1 > $number3 && $number3 > $number2 || $number1 < $number3 && $nu
 else {
     echo 'Yra tarpusavy lygiu skaiciu: ' . $number1 . ', ' . $number2 . ', ' . $number3;
 }
+echo '<br>'; echo '<br>'; echo '<br>';
+
+
+echo '4. ';
+$krastine1 = rand (1, 10);
+$krastine2 = rand (1, 10);
+$krastine3 = rand (1, 10);
+if ($krastine1 < $krastine2 + $krastine3 ||$krastine2 < $krastine1 + $krastine3||$krastine3 < $krastine1 + $krastine2){
+    echo 'Galimas trikampis: ' . $krastine1 . ', ' . $krastine2 . ', ' . $krastine3;
+}
+echo '<br>'; echo '<br>'; echo '<br>';
+
+
+echo '5. ';
