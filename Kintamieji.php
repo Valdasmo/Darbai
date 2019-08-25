@@ -158,11 +158,18 @@ echo '8. ';
 $zvake = rand(5,3000);
 $kaina = $zvake * 1;
 if ($kaina>2000) {
-    $kainaFinale = $kaina - 4;
+    $kainaFinale = $kaina - ($kaina/100*4);
 }
 elseif ($kaina>1000) {
-    $kainaFinale = $kaina - 3;
+    $kainaFinale = $kaina - ($kaina/100*3);
+}
+else {
+    $kainaFinale = $kaina;
 }
 
-echo $zvake.': vnt. - kaina: '.$kainaFinale;
+echo $zvake.': vnt. - kaina: '.$kainaFinale.' Eur';
 
+echo '<br>'; echo '<br>'; echo '<br>';
+
+
+echo '9. ';
