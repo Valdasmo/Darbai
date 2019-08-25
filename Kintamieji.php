@@ -173,3 +173,19 @@ echo '<br>'; echo '<br>'; echo '<br>';
 
 
 echo '9. ';
+$kintamas1 = rand (0, 100);
+$kintamas2 = rand (0, 100);
+$kintamas3 = rand (0, 100);
+echo 'Aritmetinis vidurkis kintamuju: '.$kintamas1.', '.$kintamas2.', '.$kintamas3.' = '.$aritvid = ($kintamas1+$kintamas2+$kintamas3)/3;
+if ($kintamas1<10 || $kintamas1>90) {
+    $kintamas1 = 0;
+}
+if ($kintamas2<10 || $kintamas2>90) {
+    $kintamas1 = 0;
+}
+if ($kintamas3<10 || $kintamas3>90) {
+    $kintamas1 = 0;
+}
+echo'<br>';
+
+echo 'Aritmetinis vidurkis kintamuju su salyga: '.$kintamas1.', '.$kintamas2.', '.$kintamas3.' = '.$aritvidribotas = ($kintamas1+$kintamas2+$kintamas3)/3;
