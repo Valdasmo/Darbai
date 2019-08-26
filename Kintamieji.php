@@ -176,7 +176,7 @@ echo '9. ';
 $kintamas1 = rand (0, 100);
 $kintamas2 = rand (0, 100);
 $kintamas3 = rand (0, 100);
-echo 'Aritmetinis vidurkis kintamuju: '.$kintamas1.', '.$kintamas2.', '.$kintamas3.' = '.$aritvid = ($kintamas1+$kintamas2+$kintamas3)/3;
+echo 'Aritmetinis vidurkis kintamuju: '.$kintamas1.', '.$kintamas2.', '.$kintamas3.' = '.number_format($aritvid = ($kintamas1+$kintamas2+$kintamas3)/3, 0, '.', '');
 if ($kintamas1<10 || $kintamas1>90) {
     $kintamas1 = 0;
 }
@@ -188,9 +188,37 @@ if ($kintamas3<10 || $kintamas3>90) {
 }
 echo'<br>';
 
-echo 'Aritmetinis vidurkis kintamuju su salyga: '.$kintamas1.', '.$kintamas2.', '.$kintamas3.' = '.$aritvidribotas = ($kintamas1+$kintamas2+$kintamas3)/3;
+echo 'Aritmetinis vidurkis kintamuju su salyga: '.$kintamas1.', '.$kintamas2.', '.$kintamas3.' = '.number_format($aritvidribotas = ($kintamas1+$kintamas2+$kintamas3)/3, 0, '.', '');
 
 echo '<br>'; echo '<br>'; echo '<br>';
 
 
 echo '10. ';
+$valandos = rand (0, 23);
+$minutes = rand (0, 59);
+$sekundes = rand (0, 59);
+$papildomossekundes = rand (0, 300);
+echo '<br>';
+echo $valandos.' : '.$minutes.' : '.$sekundes;
+echo '<br>';
+echo 'Papildomos sekundes: '.$papildomossekundes;
+echo '<br>';  
+// $pminutes = ($papildomossekundes / 60) % 60;  // kaip cia pavyksta graziai atskirti minutes?
+
+$psekundes = $papildomossekundes%60;
+$sumsek = $sekundes + $psekundes;
+$pliusminute = (int)($sumsek / 60);
+// $finalminutes = $minutes + $pliusminute;
+$finalsekundes = $sumsek % 60;
+
+$pminutes = (int)($papildomossekundes/60);
+$summin = $minutes + $pminutes + $pliusminute;
+
+$pliusvalanda = (int)($summin/60);
+$finalvalanda = $valandos + $pliusvalanda;
+$finalminutes = $summin % 60;
+
+
+
+echo $finalvalanda.' : '.$finalminutes.' : '.$finalsekundes;
+
