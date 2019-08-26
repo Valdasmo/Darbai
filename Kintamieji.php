@@ -189,3 +189,8 @@ if ($kintamas3<10 || $kintamas3>90) {
 echo'<br>';
 
 echo 'Aritmetinis vidurkis kintamuju su salyga: '.$kintamas1.', '.$kintamas2.', '.$kintamas3.' = '.$aritvidribotas = ($kintamas1+$kintamas2+$kintamas3)/3;
+
+echo '<br>'; echo '<br>'; echo '<br>';
+
+
+echo '10. ';
