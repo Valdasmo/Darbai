@@ -58,10 +58,33 @@ $string3 = '2001: A Space Odyssey';
 $string4 = 'It\'s a Wonderful Life';
 echo $string1;
 echo '<br>';
-echo str_ireplace(array('a','e','i','o','u',' '), '', $string1);
+echo str_ireplace(array('a','e','i','o','u'), '', $string1);
 echo '<br>';
 echo $string2;
 echo '<br>';
+echo str_ireplace(array('a','e','i','o','u',' '), '', $string2);
+echo '<br>';
 echo $string3;
 echo '<br>';
+echo str_ireplace(array('a','e','i','o','u',' '), '', $string3);
+echo '<br>';
 echo $string4;
+echo '<br>';
+echo str_ireplace(array('a','e','i','o','u',' '), '', $string4);
+echo '<br>'; echo '<br>'; echo '<br>';
+
+
+echo '8. ';
+$string = 'Star Wars: Episode '.str_repeat(' ', rand(0,5)). rand(1,9) . ' - A New Hope';
+echo $string;
+echo '<br>';
+echo 'Epizodo numeris: '.intval(preg_replace('/[^0-9.]/','',$string));
+echo '<br>'; echo '<br>'; echo '<br>';
+
+
+echo '9. ';
+$stringas1 = 'Don\'t Be a Menace to South Central While Drinking Your Juice in the Hood';
+$stringas2 = 'Tik nereikia gąsdinti Pietų Centro, geriant sultis pas save kvartale';
+echo $stringas1;
+echo '<br>';
+echo $stringas2;
