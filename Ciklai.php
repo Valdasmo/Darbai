@@ -65,7 +65,7 @@ echo '4. ';
 for ($i=0; $i < 100; $i++) { 
     echo '<br>';
     for ($j=0; $j < 100; $j++){
-    echo '<span style="margin: -10px 0px -10px 0px">*</span>';
+    echo '<span style="margin: 0px 1.5px 0px 1.5px; font-size: 5px;">*</span>';
     }
 }
 
