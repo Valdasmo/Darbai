@@ -83,8 +83,41 @@ echo '<br>'; echo '<br>'; echo '<br>';
 
 
 echo '9. ';
+// Suskaičiuoti kiek stringe “Don't Be a Menace to South Central While Drinking Your Juice in the Hood”
+//  yra žodžių trumpesnių arba lygių nei 5 raidės. Pakartokite kodą su stringu “Tik nereikia gąsdinti 
+//  Pietų Centro, geriant sultis pas save kvartale”.
+
 $stringas1 = 'Don\'t Be a Menace to South Central While Drinking Your Juice in the Hood';
 $stringas2 = 'Tik nereikia gąsdinti Pietų Centro, geriant sultis pas save kvartale';
 echo $stringas1;
 echo '<br>';
-echo $stringas2;
+$sakinys = str_replace(",","",$stringas1);
+    $zodziai = explode(" ", $sakinys);
+    $count = 0;
+    for($i = 0; $i < count($zodziai); $i++){
+        if(mb_strlen($zodziai[$i]) <= 5){
+            $count++;
+        }
+    }
+    echo 'Zodziu su 5 ar maziau raidzių yra: '.$count;
+    echo '<br>';
+    echo $stringas2;
+    echo '<br>';
+    $sakinys = str_replace(",","",$stringas2);
+    $zodziai = explode(" ", $sakinys);
+    $count = 0;
+    for($i = 0; $i < count($zodziai); $i++){
+        if(mb_strlen($zodziai[$i]) <= 5){
+            $count++;
+        }
+    }
+    echo 'Zodziu su 5 ar maziau raidzių yra: '.$count;
+echo '<br>'; echo '<br>'; echo '<br>';
+
+
+echo '10. ';
+// Parašyti kodą, kuris generuotų atsitiktinį stringą iš lotyniškų mažųjų raidžių. Stringo ilgis 3 simboliai.
+
+$length = 3;
+$randomletters = substr(str_shuffle("abcdefghijklmnopqrstuvwxyz"), 0, $length);
+echo $randomletters;
