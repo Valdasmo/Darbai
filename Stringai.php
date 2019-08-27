@@ -58,6 +58,8 @@ $string3 = '2001: A Space Odyssey';
 $string4 = 'It\'s a Wonderful Life';
 echo $string1;
 echo '<br>';
+echo str_ireplace(array('a','e','i','o','u',' '), '', $string1);
+echo '<br>';
 echo $string2;
 echo '<br>';
 echo $string3;
