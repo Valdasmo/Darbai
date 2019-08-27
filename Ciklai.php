@@ -62,9 +62,12 @@ echo '4. ';
 // Nupieškite kvadratą iš “*”, kurio kraštines sudaro 100 “*”. 
 // Panaudokite css stilių, kad kvadratas ekrane atrodytų kvadratinis.
 
-for ($i=0; $i < 100; $i++) { 
+for ($i=0; $i <= 100; $i++) { 
     echo '<br>';
-    for ($j=0; $j < 100; $j++){
+    for ($j=0; $j <= 100; $j++){
+        if ($i == $j) {
+            echo '<span style="margin: 0px 1.5px 0px 1.5px; font-size: 5px; Color:red">*</span>';
+        }
     echo '<span style="margin: 0px 1.5px 0px 1.5px; font-size: 5px;">*</span>';
     }
 }
