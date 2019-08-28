@@ -3,7 +3,7 @@
 Naudodami css stilių “suskaldykite” liniją taip, kad visos žvaigždutės matytųsi ekrane;
 Programiškai “suskaldykite” žvaigždutes taip, kad vienoje eilutėje nebūtų daugiau nei 50 “*”; */
 
-echo '1. ';
+echo '1.-------------------------- ';
 echo '<br>';
 $i = 0;
 for ($i=1; $i<=400; $i++){
@@ -20,7 +20,7 @@ echo '<br>'; echo '<br>'; echo '<br>';
 // Sugeneruokit 300 atsitiktinių skaičių nuo 0 iki 300, atspausdinkite juos atskirtus tarpais ir
 //  suskaičiuokite kiek tarp jų yra didesnių už 150.  Skaičiai didesni nei 275 turi būti raudonos spalvos.
 
-echo '2. ';
+echo '2.------------------------------ ';
 
 echo '<br>';
 
@@ -45,7 +45,8 @@ echo '<br>'; echo '<br>'; echo '<br>';
 //  Skaičius atskirkite kableliais. Po paskutinio skaičiaus kablelio neturi būti.
 //   Jeigu reikia, panaudokite css, kad visi rezultatai matytųsi ekrane.
 
-echo '3. ';
+echo '3.------------------------------- ';
+echo '<br>';
 for ($i=1; $i<=3000; $i++){
     if ($i%77 == 0) {
         if($i == 77){
@@ -58,7 +59,7 @@ for ($i=1; $i<=3000; $i++){
 echo '<br>'; echo '<br>'; echo '<br>';
 
 
-echo '4. ';
+echo '4.------------------------------ ';
 // Nupieškite kvadratą iš “*”, kurio kraštines sudaro 100 “*”. 
 // Panaudokite css stilių, kad kvadratas ekrane atrodytų kvadratinis.
 
@@ -75,7 +76,7 @@ for ($i=1; $i <= 100; $i++) {
 echo '<br>'; echo '<br>'; echo '<br>';
 
 
-echo '5. ';
+echo '5.----------------------------- ';
 echo '<br>';
 echo 'Padaryta 4 užduotyje';
 //Prieš tai nupieštam kvadratui nupieškite raudonas istrižaines.
@@ -83,16 +84,30 @@ echo 'Padaryta 4 užduotyje';
 echo '<br>'; echo '<br>'; echo '<br>';
 
 
-echo '6. ';
+echo '6.---------------------------- ';
+// Metam monetą. Monetos kritimo rezultatą imituojam rand() funkcija,
+//  kur 0 yra herbas, o 1 - skaičius. Monetos metimo rezultatus išvedame
+//  į ekraną atskiroje eilutėje: “S” jeigu iškrito skaičius ir “H” jeigu herbas.
+//  Suprogramuokite keturis skirtingus scenarijus kai monetos metimą stabdome:
+// Iškritus herbui;
+// Tris kartus iškritus herbui;
+// Tris kartus iš eilės iškritus herbui;
+
 
 echo '<br>'; echo '<br>'; echo '<br>';
 
 
-echo '7. ';
+echo '7.---------------------------- ';
+// Kazys ir Petras žaidžiai šaškėm. Petras surenka taškų kiekį nuo 10 iki 20,
+// Kazys surenka taškų kiekį nuo 5 iki 25. Vienoje eilutėje išvesti žaidėjų
+// vardus su taškų kiekiu ir “Partiją laimėjo: ​laimėtojo vardas​”. 
+// Taškų kiekį generuokite funkcija ​rand()​. Žaidimą laimi tas, kas greičiau surenka 222 taškus.
+// Partijas kartoti tol, kol kažkuris žaidėjas pirmas surenka 222 arba daugiau taškų.
+
 echo '<br>'; echo '<br>'; echo '<br>';
 
 
-echo '8. ';
+echo '8.----------------------------- ';
 // Reikia nupaišyti pilnavidurį rombą, taip pat, kaip ir pilnavidurį kvadratą, 
 // kurio aukštis 21 eilutė. Reikia padaryti, kad kiekviena rombo žvaigždutė būtų 
 // atsitiktinės RGB spalvos (perkrovus puslapį spalvos turi keistis).
@@ -139,11 +154,31 @@ function printDiamond($n)
 echo '<br>'; echo '<br>'; echo '<br>';
 
 
-echo '9. ';
+echo '9.----------------------------- ';
+// Panaudokite funkciją microtime(). Paskaičiuokite kiek sekundžių užtruks kodą:
+// $c = "10 bezdzioniu suvalge 20 bananu.";
+// Įvykdyti 1 milijoną kartų ir palyginkite kiek užtruks įvykdyti kodą: 
+// $c = '10 bezdzioniu suvalge 20 bananu.';
+// (Stringas viengubose ir dvigubose kabutėse)
+
+
+echo'<br>';
+$c = "10 bezdzioniu suvalge 20 bananu.";
+echo'<br>';
+$c = '10 bezdzioniu suvalge 20 bananu.';
+
 echo '<br>'; echo '<br>'; echo '<br>';
 
 
-echo '10. ';
+echo '10.------------------------------- ';
+// Sumodeliuokite vinies kalimą. Įkalimo gylį sumodeliuokite pasinaudodami rand() funkcija.
+//  Vinies ilgis 8.5cm (pilnai sulenda į lentą).
+// “Įkalkite” 5 vinis mažais smūgiais.
+//  Vienas smūgis vinį įkala 5-20 mm. Suskaičiuokite kiek reikia smūgių.
+// “Įkalkite” 5 vinis dideliais smūgiais.
+//  Vienas smūgis vinį įkala 20-30 mm, bet yra 50% tikimybė (pasinaudokite rand() funkcija tikimybei sumodeliuoti),
+//  kad smūgis nepataikys į vinį. Suskaičiuokite kiek reikia smūgių.
+
 
 
 
