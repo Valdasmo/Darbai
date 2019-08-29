@@ -235,10 +235,35 @@ echo '9.----------------------------- ';
 
 
 echo'<br>';
+function microtime_float()
+{
+    list($usec, $sec) = explode(" ", microtime());
+    return ((float)$usec + (float)$sec);
+}
+$time_start = microtime_float();
+$i = 0;
+while($i < 1000000){
 $c = "10 bezdzioniu suvalge 20 bananu.";
+$i++;
+}
+$time_end = microtime_float();
+echo 'su dvigubom kabutem("") uztruko: '. ($time_end - $time_start);
+//========================================================================
 echo'<br>';
+// function microtime_float1()
+// {
+//     list($usec, $sec) = explode(" ", microtime());
+//     return ((float)$usec + (float)$sec);
+// }
+$time_start = microtime_float();
+$i = 0;
+while($i < 1000000){
 $c = '10 bezdzioniu suvalge 20 bananu.';
-
+$i++;
+}
+$time_end = microtime_float();
+echo 'su viengubom kabutem(\'\') uztruko: '. ($time_end - $time_start);
+//========================================================================
 echo '<br>'; echo '<br>'; echo '<br>';
 
 
