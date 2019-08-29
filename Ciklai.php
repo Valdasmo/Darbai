@@ -92,18 +92,90 @@ echo '6.---------------------------- ';
 // Iškritus herbui;
 // Tris kartus iškritus herbui;
 // Tris kartus iš eilės iškritus herbui;
+echo '<br>';
+// ---------------------
+$coin = 0;
+$coin = rand(0, 1);
+if ($coin == 0) {
+echo 'H';
+}
+else {
+    echo 'S' ;
+}
+// --------------------------
+echo '<br>';
+$coin = 1;
+while ($coin == 1) {
+$coin = rand(0, 1);
+echo '1';
+}
+echo '---H';
+// ---------------------------
+echo '<br>';
+$coin = 0;
+$counter = 0;
+while ($counter < 3) {
+$coin = rand(0, 1);
+echo $coin;
+if ($coin == 0){
+$counter++;
+}
+}
+echo '---Iskrito 3 herbai H.';
+echo '<br>';
+// -------------------------------------
+echo '<br>';
+
+$coin = 0;
+$counter = 0;
+while ($counter < 3) {
+$coin = rand(0, 1);
+echo $coin;
+if ($coin == 0) {
+    $counter++;
+}
+else {
+    $counter = 0;
+}
+}
+echo '--- Trys H is eiles!!!';
+
+echo '<br>';
+
 
 
 echo '<br>'; echo '<br>'; echo '<br>';
 
 
 echo '7.---------------------------- ';
+echo '<br>';
 // Kazys ir Petras žaidžiai šaškėm. Petras surenka taškų kiekį nuo 10 iki 20,
 // Kazys surenka taškų kiekį nuo 5 iki 25. Vienoje eilutėje išvesti žaidėjų
 // vardus su taškų kiekiu ir “Partiją laimėjo: ​laimėtojo vardas​”. 
 // Taškų kiekį generuokite funkcija ​rand()​. Žaidimą laimi tas, kas greičiau surenka 222 taškus.
 // Partijas kartoti tol, kol kažkuris žaidėjas pirmas surenka 222 arba daugiau taškų.
+$kazyssuma = 0;
+$petrassuma = 0;
+while ($kazyssuma <= 222 || $petrassuma <= 222){
+$kazys = rand(5, 25);
+$petras = rand(10, 20);
+// echo "Kazys: $kazys Petras: $petras";
+$kazyssuma += $kazys;
+$petrassuma += $petras;
+}
 
+echo "Kazys: $kazyssuma Petras: $petrassuma";
+echo '<br>';
+
+if ($kazyssuma > $petrassuma) {
+    echo 'Laimejo Kazys';
+}
+elseif ($kazyssuma == $petrassuma) {
+    echo 'Niekas nelaimejo';
+}
+else {
+    echo 'Laimejo Petras';
+}
 echo '<br>'; echo '<br>'; echo '<br>';
 
 
@@ -178,9 +250,3 @@ echo '10.------------------------------- ';
 // “Įkalkite” 5 vinis dideliais smūgiais.
 //  Vienas smūgis vinį įkala 20-30 mm, bet yra 50% tikimybė (pasinaudokite rand() funkcija tikimybei sumodeliuoti),
 //  kad smūgis nepataikys į vinį. Suskaičiuokite kiek reikia smūgių.
-
-
-
-
-
-
