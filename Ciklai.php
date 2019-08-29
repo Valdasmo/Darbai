@@ -275,3 +275,22 @@ echo '10.------------------------------- ';
 // “Įkalkite” 5 vinis dideliais smūgiais.
 //  Vienas smūgis vinį įkala 20-30 mm, bet yra 50% tikimybė (pasinaudokite rand() funkcija tikimybei sumodeliuoti),
 //  kad smūgis nepataikys į vinį. Suskaičiuokite kiek reikia smūgių.
+echo '<br>';
+$gylis = rand(5, 85);
+$smugiuKiekis = 0;
+$sukalimoGylis = 0;
+$kiekis = 0;
+echo '<br>';
+do{
+    if($sukalimoGylis < $gylis){
+        $smugis = rand(5,20);
+        $sukalimoGylis += $smugis;
+        $smugiuKiekis++;
+    }
+    elseif($sukalimoGylis >= $gylis){
+        echo '<br> Sukalti viniai '.$gylis.'mm i siena prireike ' .$smugiuKiekis. ' smugių.';
+        $sukalimoGylis = 0;
+        $smugiuKiekis = 0;
+        $kiekis++;
+        }
+}while($kiekis < 5);
