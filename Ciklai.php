@@ -294,3 +294,32 @@ do{
         $kiekis++;
         }
 }while($kiekis < 5);
+
+echo '<br>';
+$gylis = rand(5, 85);
+$smugiuKiekis = 0;
+$sukalimoGylis = 0;
+$kiekis = 0;
+$pataike = 0;
+$nepataike = 0;
+echo '<br>';
+do{
+    $pataike = rand(0, 1);
+    if ($pataike > 0){
+    if($sukalimoGylis < $gylis){
+        $smugis = rand(20,30);
+        $sukalimoGylis += $smugis;
+        $smugiuKiekis++;
+    }
+    elseif($sukalimoGylis >= $gylis){
+        echo '<br> Sukalti viniai '.$gylis.'mm i siena prireike ' .$smugiuKiekis. ' smugių. Nepataike: '.$nepataike;
+        $sukalimoGylis = 0;
+        $smugiuKiekis = 0;
+        $kiekis++;
+        }
+    }
+    else {
+        $smugiuKiekis++;
+        $nepataike++;
+    }
+}while($kiekis < 5);
