@@ -33,6 +33,37 @@ echo '2.----------------------------------';
 echo '<br>';
 // <!-- Analogiškai 1 uždaviniui parašykite skriptą puslapiui su trim mygtukais.
 //  Naudokite metodą POST. -->
+?>
+<!-- <button type="button" name='z'>Clickz</button>
+<br>
+<button type="button" name="y">Clicky</button> -->
+<button type="submit" name="z" value="1">SumatoriusZ</button>
+<button type="submit" name="y" value="1">SkirtumatoriusY</button>
+
+<?php
+
+_dc($_POST);
+_dc($_GET);
+
+if (isset($_POST['z'])) {
+    echo rand(1, 50);
+  }
+  
+  if (isset($_POST['y'])) {
+    echo rand(51, 100);
+  }
+
+
+// $x = $_GET['x'] ?? 'kazkas negerai...';
+// echo $x;
+// _dc($_GET)
+
+
+
+
+
+
+
 
 
 
