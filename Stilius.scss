@@ -1,0 +1,14 @@
+
+$color: green;
+div {
+    color: red;
+    font-weight: bold;
+}
+div {
+    color: $color;
+    font-weight: bold;
+}
+div class a {
+    color: blue;
+    font-weight: bold;
+}
