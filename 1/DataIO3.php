@@ -16,12 +16,12 @@ $q = $_GET['q'] ?? 'kazkas negerai...';
 
 switch ($q) {
     case 'a':
-        echo rand(1, 50);
+        echo '<img src="../img/1.jpg" style="width:300px;height:auto;display:inline-block;margin:30px";>';
         break;
     case 'b':
-    echo rand(51, 100);
+    echo '<img src="../img/2.jpg" style="width:300px;height:auto;display:inline-block;margin:30px";>';
         break;
     case 'c':
-    echo rand(101, 150);
+    echo '<img src="../img/3.jpg" style="width:300px;height:auto;display:inline-block;margin:30px";>';
         break;
 }
