@@ -36,12 +36,7 @@ echo '<br>'; echo '<br>'; echo '<br>';
 
 
 
-echo '<br>'; echo '<br>'; echo '<br>';
-echo '3.----------------------------------';
-echo '<br>';
-// <!-- Parašykite skriptą, kuris generuotų puslapį  su trim nuorodom (linkais).
-//  Paspaudus ant kiekvieno linko turėtų būti rodomas vienas iš trijų skirtingų paveiksliukų.
-//   Naudokite tik vieną failą ir metodą GET. -->
+
 
 
 
