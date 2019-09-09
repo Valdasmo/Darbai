@@ -25,3 +25,4 @@ switch ($q) {
     echo '<img src="../img/3.jpg" style="width:300px;height:auto;display:inline-block;margin:30px";>';
         break;
 }
+// http://localhost/Darbai/duomenys/DataIO3.php
