@@ -2,7 +2,7 @@
 session_start();
 
 include __DIR__.'/hello_my_db.php';
-echo '<div style="font-size: 20px; font-weight: 800; margin: 20px;">UAB Banku BANKAS</div>';
+echo '<div style="font-size: 20px; font-weight: 800; margin: 20px;">UAB Bankiux</div>';
 
 $_SESSION['accounts'] = 1;
 
@@ -24,7 +24,7 @@ if(isset($_SESSION['accounts'])) {
 
 
 
- _dd($stmt->fetchAll());
+//  _dd($stmt->fetchAll());
 
 
     /****************************************************************************/
@@ -39,13 +39,13 @@ if(isset($_SESSION['accounts'])) {
 
         echo '<form action="" method="POST">
 <div style="width: 100%; display: inline-block; float: left; margin-bottom: 10px;">
-                <div style="width: 40px; display: inline-block; float: left;">ID-'.$row['id'].'</div>
+                <div style="width: 40px; display: inline-block; float: left;">ID-'.$row['client_id'].'</div>
                 <div style="width: 80px; display: inline-block; float: left;">'.$row['name'].'</div>
                 <div style="width: 80px; display: inline-block; float: left;">'.$row['surname'].'</div>
                 <div style="width: 50px; display: inline-block; float: left; text-align: right;margin-right: 20px;">'.$row['amount'].' €</div>
-                <button type="submit" name="rand" value="1 '.$row['id'].' '.$row['amount'].' '.$row['name'].' '.$row['surname'].'">papildyti pinigų</button>
-                <button type="submit" name="rand" value="2 '.$row['id'].' '.$row['amount'].' '.$row['name'].' '.$row['surname'].'">išleisti pinigų</button>
-                <button type="submit" name="rand" value="3 '.$row['id'].' '.$row['amount'].' '.$row['name'].' '.$row['surname'].'">ištrinti klientą</button>
+                <button type="submit" name="rand" value="1 '.$row['client_id'].' '.$row['amount'].' '.$row['name'].' '.$row['surname'].'">papildyti pinigų</button>
+                <button type="submit" name="rand" value="2 '.$row['client_id'].' '.$row['amount'].' '.$row['name'].' '.$row['surname'].'">išleisti pinigų</button>
+                <button type="submit" name="rand" value="3 '.$row['client_id'].' '.$row['amount'].' '.$row['name'].' '.$row['surname'].'">ištrinti klientą</button>
               </div>
               </form>';
 
@@ -68,23 +68,23 @@ else
 
             switch ($command){
                 case 1:
-                    header('Location: http://localhost/_36/Bankas/increase.php');
+                    header('Location: '.$localHostAdress.'increase.php');
                     break;
                 case 2:
-                    header('Location: http://localhost/_36/Bankas/reduce.php');
+                    header('Location: '.$localHostAdress.'reduce.php');
                     break;
                 case 3:
                     if($_SESSION['client_balance'] == 0){
                         $stmt = $pdo->prepare ("DELETE FROM b_clients WHERE id = ?");
                         $stmt->execute([$_SESSION['client_id']]);
-                        header('Location: http://localhost/_36/Bankas/index.php');
+                        header('Location: '.$localHostAdress.'index.php');
                         break;
                     }else{
-                        header('Location: http://localhost/_36/Bankas/delete.php');
+                        header('Location: '.$localHostAdress.'delete.php');
                         break;
                     }
                 case 4:
-                    header('Location: http://localhost/_36/Bankas/newClient.php');/*po posto reikia puslapį persiųsti */
+                    header('Location: '.$localHostAdress.'newClient.php');/*po posto reikia puslapį persiųsti */
                     break;
             }
         die(); //naršykle daugiau kieko negaus - tegu eina dirbti

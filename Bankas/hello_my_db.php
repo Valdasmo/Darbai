@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';
-$db   = 'bank_clients'; //duomenu bazes vardas
+$db   = 'bank_cl'; //duomenu bazes vardas
 $user = 'root'; //xammp visada root...
-$pass = '123';
+$pass = '';
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
@@ -18,3 +18,4 @@ try {
 } catch (\PDOException $e) {
     throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
+$localHostAdress = 'http://localhost/Darbai/Bankas/';

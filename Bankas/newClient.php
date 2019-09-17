@@ -36,7 +36,7 @@ if(!empty($_POST)){
     $stmt->execute([rand(1000000, 9999999), 0, $client_id]);
 
 
-    header('Location: http://localhost/_36/Bankas/');/*po posto reikia puslapį persiųsti */
+    header('Location: '.$localHostAdress.'index.php');/*po posto reikia puslapį persiųsti */
     die(); //naršykle daugiau kieko negaus - tegu eina dirbti
 }
 ?>
